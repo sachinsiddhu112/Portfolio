@@ -47,11 +47,11 @@
  
 @media screen and (max-width:1030px) {
   .p-img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
   .project{
-
+height: 350px;
   }
 }
  @media screen and (max-width:600px) {

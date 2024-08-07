@@ -13,6 +13,7 @@
   }
   
  .navbar{
+
   overflow: hidden;
  }
   .list {
@@ -20,13 +21,20 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    
     transform: translateX(20vw);
     width: 100%;
     max-width: 500px;
     gap: 70px;
     list-style-type: none;
     
+  }
+  .list_item{
+    cursor: pointer;
+  }
+  .list_item:hover{
+    background-color: orange;
+    transform: scale(1.1);
   }
  
   .hero {
@@ -46,6 +54,30 @@
     width: 100%;
     text-align: left;
     font-family: "Merienda", cursive;
+  }
+.h-left-bottom{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: relative;
+  top: -150px;
+}
+ 
+  .d-resume{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid orange;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+   
+  }
+  .d-resume:hover{
+    background-color: orange;
+    color: white;
+    box-shadow: 1px 1px green;
   }
   .h-heading{
     margin: 0;
