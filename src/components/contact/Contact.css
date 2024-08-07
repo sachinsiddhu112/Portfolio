@@ -1,0 +1,119 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: "Merienda", cursive;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+    gap: 20px;
+    padding: 20px;
+   
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-item{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-family: "Merienda", cursive;
+  }
+  .form-item input{
+    border: 1px solid orange;
+    border-radius: 3px;
+    width: 100%;
+    height: 30px;
+   
+  }
+  .form-item input:hover{
+    box-shadow: 1px 1px 1px orange;
+  }
+  .form-item textarea{
+    height: 200px;
+    border: 1px solid orange;
+    border-radius: 7px;
+    
+  }
+  .form-item textarea:hover{
+    box-shadow: 1px 1px 1px orange;
+  }
+
+  .btn{
+    width: 250px;
+    height: 30px;
+    border: 1px solid orange;
+    font-family: "Merienda", cursive ;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn:hover{
+    border: none;
+    background-color: orange;
+    color: black;
+    
+  }
+  .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0066cc;
+  }
+
+  .backgrounds{
+    display: flex;
+    flex-direction: row;
+  }
+  .bg-1{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image:linear-gradient(to left,#ffca3a,#293241);
+    filter: blur(180px);
+    z-index: -1;
+    position: relative;
+    top: -300px;
+    left: -100px;
+  }
+
+  .bg-2{
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image:linear-gradient(to left,#ffca3a,#293241);
+    filter: blur(180px);
+    z-index: -1;
+    position: relative;
+    top: -300px;
+    right: -100px;
+  }
+
+  @media screen and (max-width:700px) {
+    .container{margin-left: 20px;
+    border: none;}
+    .bg-1{
+     display: none;
+      
+    }
+    .bg-2{
+      right: -10px;
+      width: 200px;
+      height: 200px;
+      filter: blur(80px);
+      top: -200px;
+    }
+  }
