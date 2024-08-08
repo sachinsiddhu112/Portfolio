@@ -52,6 +52,7 @@
     align-items: center;
     flex: 1;
     width: 100%;
+    height: fit-content;
     text-align: left;
     font-family: "Merienda", cursive;
   }
@@ -94,15 +95,15 @@
   .hero-right  {
     flex: 1;
     width: 100%;
-   
+    height: fit-content;
   }
   .hero-right img{
     width: 300px;
   }
   
   .h-bg-1{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 200px;
     border-radius: 50%;
     background-image:linear-gradient(to left,#ffca3a,transparent);
     filter: blur(200px);

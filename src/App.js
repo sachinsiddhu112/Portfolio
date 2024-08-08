@@ -10,11 +10,11 @@ const App = () => {
   return (
   <div className='app'>
   <HomePage/>
-  <hr/>
+  <hr className='break'/>
   <SkillsPage/>
-  <hr/>
+  <hr className='break'/>
   <ProjectsPage/>
-  <hr />
+  <hr className='break'/>
   <ContactPage/>
   
   </div>  

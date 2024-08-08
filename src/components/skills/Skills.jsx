@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {motion} from 'framer-motion';
 
 
@@ -19,7 +19,7 @@ const skills = [
   { name: 'CSS', level: 8 ,img:CSS},
   { name: 'JavaScript', level: 9,img:Javascript },
   { name: 'Bootstrap', level: 8 ,img:Bootstrap},
-  { name: 'Tailwind', level: 7.5,img:Tailwind },
+  { name: 'Tailwind', level: 7,img:Tailwind },
   { name: 'ReactJS', level: 9,img:Reactj },
   { name: 'ExpressJS', level: 8 ,img:Express},
   { name: 'MongoDB', level: 7 ,img:Mongodb},
@@ -28,27 +28,38 @@ const skills = [
 ];
 
 const SkillsPage = () => {
+    
+    const [skillLengthMultiplier,setSkillLengthMult] = useState(30);
 
+    useEffect(() => {
+
+      if(window.screen.width<1000 ){
+        setSkillLengthMult(25);
+      }
+      
+
+    },[window.screen.width])
     const transition = { type: 'spring', duration: 3 }
 
   return (
     <div className="skills" id='Skills'>
       <h2>Skills</h2>
       <motion.div className="skills-container"
-       initial={{height:"0px" , opacity:"0"}}
-       whileInView={{height:"fit-content",opacity:"1"}}
-       transition={{type:"spring",duration:3}}
+       initial={{ opacity:"0"}}
+       whileInView={{opacity:"1"}}
+       transition={{type:"spring",duration:2}}
       >
         {skills.map((skill, index) => (
           <div key={index} className="skill">
             
-            <img className='skill-img' src={skill.img} alt='Loading'/>
+            <span>{skill.name}</span>
+         
             <div className="skill-bar">
               <motion.div
                initial={{ width: "1px"}}
-               whileInView={{ width:skill.level*20 }}
+               whileInView={{ width:skill.level*skillLengthMultiplier }}
                transition={{...transition,type:'tween'}}
-              className="skill-level" style={{ width: `${skill.level * 10}%` }}></motion.div>
+              className="skill-level" ></motion.div>
             </div>
           </div>
         ))}
