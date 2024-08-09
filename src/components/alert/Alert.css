@@ -1,0 +1,47 @@
+.alert-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 10px;
+   margin-bottom: 5px;
+   justify-content: space-between;
+   
+}
+.widerViewAlertPopUp{
+    position: absolute;
+    left: 0px;
+}
+.warning{
+    border: 2px solid yellow;
+    border-radius: 20%;
+    
+}
+.success{
+    border: 2px solid green;
+    border-radius: 20px;
+}
+.failure{
+    border: 2px solid red;
+    border-radius: 20px;
+}
+.alert{
+display: flex;
+gap: 5px;
+font-size: large;
+}
+.btn{
+    background: transparent;
+    border: none;
+    position: relative;
+    top: -9px;
+    right: -10px;
+    cursor: pointer;
+    border-radius: 45%;
+}
+
+@media screen and (max-width:600px) {
+    .alert-container{
+        width: 90%;
+    }
+}

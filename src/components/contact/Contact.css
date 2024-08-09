@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+   
     width: 100%;
     max-width: 700px;
     border-radius: 20px;
@@ -53,7 +53,7 @@
     box-shadow: 1px 1px 1px orange;
   }
 
-  .btn{
+  .s-btn{
     width: 250px;
     height: 30px;
     border: 1px solid orange;
@@ -61,7 +61,7 @@
     cursor: pointer;
     border-radius: 5px;
   }
-  .btn:hover{
+  .s-btn:hover{
     border: none;
     background-color: orange;
     color: black;
