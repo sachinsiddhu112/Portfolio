@@ -39,7 +39,7 @@ const ProjectsPage = () => {
                 {
                     projects.map((project, index) => (
                         <motion.div 
-                        initial={{opacity:0,transform:"translateY(-50px)"}}
+                        initial={{opacity:0,transform:"translateY(-5px)"}}
                         whileInView={{opacity:1,transform:"translateY(10px)"}}
                         whileHover={{transform:"translateX(-10px)"}}
                         transition={{duration:3,type:"spring"}}

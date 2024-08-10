@@ -13,8 +13,16 @@
   }
   
  .navbar{
+ display: flex;
 
   overflow: hidden;
+ }
+ .nav-logo{
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
  }
   .list {
     display: flex;
@@ -22,7 +30,7 @@
     justify-content: center;
     align-items: center;
     
-    transform: translateX(20vw);
+    
     width: 100%;
     max-width: 500px;
     gap: 70px;
@@ -33,7 +41,7 @@
     cursor: pointer;
   }
   .list_item:hover{
-    background-color: orange;
+    color: #ffca3a;
     transform: scale(1.1);
   }
  
@@ -113,18 +121,33 @@
     right: -100px;
   }
 
+ @media screen and (max-width:970px) {
+  .list{
+    gap: 30px;
+  }
+  .list_item{
+    
+  }
+ }
 
-
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:700px) {
     .navbar ul{
         margin-top: 38px;
         flex-direction: column;
-        transform: translateX(50vw);
+        transform: translateX(40vw);
         gap: 30px;
         width: fit-content;
 
     }
-    
+    .nav-logo{
+      width: 50px;
+      border-radius: 50%;
+
+    }
+    .list_item{
+      position: relative;
+      right: -250px;
+    }
     .nav-btn{
       position: absolute;
       right: 20px;

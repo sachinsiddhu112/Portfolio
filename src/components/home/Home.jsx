@@ -9,7 +9,8 @@ import { FaInstagram } from "react-icons/fa6";
 
 import './Home.css'; // Custom CSS for styling
 import Pic from "../assets/picAvatar.jpg"
-import PicWithoutBg from "../assets/withoutBgPic.png"
+import PicWithoutBg from "../assets/withoutBgPic.png";
+import Portfolio from "../assets/p_copy.png"
 
 const HomePage = () => {
 
@@ -29,12 +30,12 @@ const HomePage = () => {
     <div className="home" id='Home'>
 
       <nav className="navbar">
-
-        {mobile && !openMenu && <button className='nav-btn' onClick={() => setMenuOpened(true)} ><HiBars3BottomRight /></button>}
+        <img className='nav-logo' src={Portfolio} alt='PORTFOLIO'/>
+        {mobile && !openMenu && <button className='nav-btn' onClick={() => setMenuOpened(true)} ><HiBars3BottomRight size={30} /></button>}
         <ul className={`list `}>
           <motion.li
-            initial={{ position: "relative", right: "-260px" }}
-            animate={openMenu ? { right: "0px" } : ""}
+            initial={{ transform:"translateX(100px)"}}
+            animate={openMenu ? { transform:"translateX(-100px)" } : ""}
             transition={{ duration: 1, type: 'tween' }}
             className='list_item'>
             <Link onClick={() => setMenuOpened(false)}
@@ -44,27 +45,29 @@ const HomePage = () => {
               smooth={true}>Home</Link></motion.li>
 
           <motion.li className='list_item'
-            initial={{ position: "relative", right: "-260px" }}
-            animate={openMenu ? { right: "0px" } : {}}
-            transition={{ duration: 1.5, type: 'tween' }}>
+            initial={{ transform:"translateX(100px)"}}
+            animate={openMenu ? { transform:"translateX(-100px)" } : ""}
+            transition={{ duration: 1, type: 'tween' }}
+            
+            >
             <Link onClick={() => setMenuOpened(false)}
               to='Skills'
               activeClass='active'
               span={true}
               smooth={true}>Skills</Link></motion.li>
           <motion.li className='list_item'
-            initial={{ position: "relative", right: "-260px" }}
-            animate={openMenu ? { right: "0px" } : ""}
-            transition={{ duration: 2, type: 'tween' }}>
+             initial={{ transform:"translateX(100px)"}}
+             animate={openMenu ? { transform:"translateX(-100px)" } : ""}
+             transition={{ duration: 1, type: 'tween' }}>
             <Link onClick={() => setMenuOpened(false)}
               to='Projects'
               activeClass='active'
               span={true}
               smooth={true}>Projects</Link></motion.li>
           <motion.li className='list_item'
-            initial={{ position: "relative", right: "-260px" }}
-            animate={openMenu ? { right: "0px" } : ""}
-            transition={{ duration: 2.5, type: 'tween' }}>
+             initial={{ transform:"translateX(100px)"}}
+             animate={openMenu ? { transform:"translateX(-100px)" } : ""}
+             transition={{ duration: 1, type: 'tween' }}>
             <Link onClick={() => setMenuOpened(false)}
               to='Contact'
               activeClass='active'
