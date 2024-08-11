@@ -5,18 +5,20 @@
     max-width: 1200px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
   }
   
   .skills-container {
     display: grid;
     grid-template-columns: 400px 400px;
-    flex-wrap: wrap;
+    
     overflow: hidden;
     gap: 20px 50px;
     margin-top: 20px;
     width: 100%;
     max-width: 1024px;
     margin-left: 4.5vw;
+    z-index: 99;
   }
   
   .skill {
@@ -45,17 +47,31 @@
     height: 100%;
     background: #4caf50;
   }
-  @media screen and (max-width:1000px) {
+  @media screen and (max-width:900px) {
     .skills-container{
-      grid-template-columns: 330px 330px;
+      gap: 10px 10px;
     }
-    .skill-bar{
-      width: 90%;
-    }
+   .skill{
+    flex-direction: column;
+    width: 90%;
+   }
   }
-  @media  screen and (max-width:700px) {
+  @media screen and (max-width:705px) {
     .skills-container{
       display: flex;
+      flex-direction: column;
+      
+    }
+    .skill{
+      flex-direction: row;
+    }
+  }
+  @media  screen and (max-width:500px) {
+    .skills-container{
+      display: flex;
+      flex-direction: column;
+    }
+    .skill{
       flex-direction: column;
     }
   }

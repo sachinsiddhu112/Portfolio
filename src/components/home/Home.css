@@ -6,16 +6,20 @@
 .home {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 2400px;
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
   
  .navbar{
- display: flex;
-
-  overflow: hidden;
+display: flex;
+background-color: #ee9b00;
+position: fixed;
+overflow: hidden;
+width: 100%;
+max-width: 2400px;
+z-index: 999;
  }
  .nav-logo{
   width: 200px;
@@ -51,6 +55,7 @@
     margin-top: 100px;
     justify-content: center;
     padding: 20px;
+    z-index: 99;
   }
   
   .hero-left {
@@ -91,13 +96,14 @@
   .h-heading{
     margin: 0;
   }
-.h-description .p-bg{
+ .p-bg{
  background-image: radial-gradient(white,transparent); 
  width: 200px;
  height: 200px;
  filter: blur(60px);
  position: relative;
  top: -200px;
+ left: -130px;
 }
   
   .hero-right  {
@@ -114,7 +120,7 @@
     height: 200px;
     border-radius: 50%;
     background-image:linear-gradient(to left,#ffca3a,transparent);
-    filter: blur(200px);
+    filter: blur(100px);
     z-index: -1;
     position: relative;
     top: -300px;
@@ -128,13 +134,20 @@
   .list_item{
     
   }
+  .h-bg-1{
+    right: 0px;
+  }
  }
 
   @media screen and (max-width:700px) {
+    .navbar{
+      position: static;
+      background-color: transparent;
+    }
     .navbar ul{
         margin-top: 38px;
         flex-direction: column;
-        transform: translateX(40vw);
+        transform: translateX(60vw);
         gap: 30px;
         width: fit-content;
 
@@ -146,7 +159,7 @@
     }
     .list_item{
       position: relative;
-      right: -250px;
+      right: -100px;
     }
     .nav-btn{
       position: absolute;

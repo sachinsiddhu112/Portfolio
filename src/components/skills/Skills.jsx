@@ -3,6 +3,8 @@ import {motion} from 'framer-motion';
 
 
 import './Skills.css'; // Custom CSS for styling
+
+// Skills images ,not used in current version.
 import CSS from "../assets/css.png"
 import Javascript from "../assets/javascript.png"
 import HTML from "../assets/html.png"
@@ -28,26 +30,22 @@ const skills = [
 ];
 
 const SkillsPage = () => {
-    
+    //variable to adjust the length of skill-bar.
     const [skillLengthMultiplier,setSkillLengthMult] = useState(30);
 
     useEffect(() => {
-
       if(window.screen.width<1000 ){
         setSkillLengthMult(25);
       }
-      
-
     },[window.screen.width])
+    //setting the transition type and duration.
     const transition = { type: 'spring', duration: 3 }
 
   return (
     <div className="skills" id='Skills'>
       <h2>Skills</h2>
-      <motion.div className="skills-container"
-       initial={{ opacity:"0"}}
-       whileInView={{opacity:"1"}}
-       transition={{type:"spring",duration:2}}
+      <div className="skills-container"
+      
       >
         {skills.map((skill, index) => (
           <div key={index} className="skill">
@@ -63,7 +61,7 @@ const SkillsPage = () => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

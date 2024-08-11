@@ -76,6 +76,7 @@
   .backgrounds{
     display: flex;
     flex-direction: row;
+    height: 0px;
   }
   .bg-1{
     width: 500px;
@@ -103,7 +104,7 @@
   }
 
   @media screen and (max-width:700px) {
-    .container{margin-left: 20px;
+    .container{
     border: none;}
     .bg-1{
      display: none;
